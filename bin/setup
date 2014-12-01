@@ -1,0 +1,14 @@
+#!/bin/sh
+
+set -e
+
+# Install required gems, including Appraisal, which helps us test against
+# multiple Rails versions.
+bundle install
+bundle exec appraisal install
+
+# Set up database for the application that Clearance tests against
+bundle exec rake db:test:prepare
+
+# Run the tests with Appraisal
+bundle exec appraisal rake
