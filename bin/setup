@@ -3,7 +3,7 @@
 set -e
 
 # Install required gems, including Appraisal, which helps us test against
-# multiple Rails versions.
+# multiple Rails versions
 bundle install
 bundle exec appraisal install
 
