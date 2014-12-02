@@ -9,6 +9,3 @@ bundle exec appraisal install
 
 # Set up database for the application that Clearance tests against
 RAILS_ENV=test rake db:create db:migrate
-
-# Run the tests with Appraisal
-bundle exec appraisal rake
